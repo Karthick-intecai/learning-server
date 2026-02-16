@@ -20,6 +20,10 @@ app.get('/health', (req: Request, res: Response) => {
     res.status(200).json({ status: 'OK', uptime: process.uptime() });
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
+    });
+}
+
+export default app;

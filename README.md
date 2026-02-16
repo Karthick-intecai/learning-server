@@ -80,3 +80,19 @@ MONGODB_URI=mongodb://localhost:27017/new-learning
 - **Delete File**
     - `DELETE /files/:fileName`
     - Deletes the file record and removes the file from the disk.
+    - `DELETE /files/:fileName`
+    - Deletes the file record and removes the file from the disk.
+
+## Deployment (Vercel)
+
+This project is configured for deployment on Vercel.
+
+### Limitations
+> [!WARNING]
+> **File Uploads**: Files uploaded to `uploads/` are **temporary** and will disappear after the request ends because Vercel uses an ephemeral file system. For production, integrate Cloudinary or AWS S3.
+
+### Steps
+1. Push code to GitHub.
+2. Import project in Vercel.
+3. Add Environment Variables (`MONGODB_URI`).
+4. Deploy.
