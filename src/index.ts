@@ -20,14 +20,6 @@ app.get('/health', (req: Request, res: Response) => {
     res.status(200).json({ status: 'OK', uptime: process.uptime() });
 });
 
-app.get('/', (req: Request, res: Response) => {
-    res.status(200).send('API is running. Access endpoints at /api/products or /api/files');
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
-
-if (require.main === module) {
-    app.listen(PORT, () => {
-        console.log(`Server is running on port ${PORT}`);
-    });
-}
-
-export default app;
