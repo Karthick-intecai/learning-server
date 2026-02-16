@@ -15,3 +15,8 @@ dist
 
 # Logs
 *.log
+
+# Scripts
+scripts
+uploads
+postman_collection.json
